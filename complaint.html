@@ -1,0 +1,62 @@
+<html>
+<!DOCTYPE html>
+<html>
+<title>File Complaints</title>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p>
+  <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Sri_Sivasubramaniya_Nadar_College_of_Engineering.svg/800px-Sri_Sivasubramaniya_Nadar_College_of_Engineering.svg.png" height = 100px width = 100px>
+<a href = "studenthomepage.html">Home</a>
+<a href = "room.html">Rooms</a>
+<a href = "outpass.html">Outpass</a>
+<a href = "complaintsandrequests.html">Complaints and requests</a>
+<a href = "paymessbill.html">Mess bill</a>
+<a href = "AccountServlet">My account</a>
+</p>
+<hr noshade>
+<br>
+<br>
+<br>
+<center>
+  <form method="POST" action="http://localhost:8080/hms/FileComplaint" id="form1" onsubmit="function x(event){event.preventDefault();}"">
+    <fieldset>
+    <center>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name"><br><br>
+     <label for="email">Email</label>
+    <input type="text" id="email" name="email"><br><br>
+    <label for="digid">Digital Id </label>
+    <input type="text" id="digid" name="digid"><br><br>
+    <label for="year">Year</label>
+    <input type="text" id="year" name="year"><br><br>
+    <label for="hostelname">Hostel name</label>
+    <input type="text" id="hostelname" name="hostelname"><br><br>
+    <label for="roomnum">Room number</label>
+    <input type="text" id="roomnum" name="roomnum"><br><br>
+     <label for="department">Choose a department:</label>
+
+<select name="department" id="department">
+  <option value="it">IT</option>
+  <option value="carpentry">Carpentry</option>
+  <option value="plumbing">Plumbing</option>
+  <option value="electrical">Electrical</option>
+</select>
+<br><br>
+     <label for = "issue">Issue:</label>
+    <br>
+    <textarea name="issue"></textarea><br><br>
+  <button type="submit" id="submit" value="Submit">Submit</button>
+</center>
+</fieldset>
+  </form>
+</center>
+</body>
+</html>
+<script>
+  document.getElementById("submit").addEventListener("click", redirect);
+  function redirect(){
+            window.location.href = "success.html";
+  }
+</script>

@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>Pay mess bill</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Sri_Sivasubramaniya_Nadar_College_of_Engineering.svg/800px-Sri_Sivasubramaniya_Nadar_College_of_Engineering.svg.png"
+        height="100px"
+        width="100px"
+      />
+      <a href="studenthomepage.html">Home</a>
+      <a href="room.html">Rooms</a>
+      <a href="outpass.html">Outpass</a>
+      <a href="complaintsandrequests.html">Complaints and requests</a>
+      <a href="paymessbill.html">Mess bill</a>
+      <a href="AccountServlet">My account</a>
+    </p>
+    <hr noshade />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <form
+      method="POST"
+      action="http://localhost:8080/hms/PayMessBill"
+      id="form2"
+      onsubmit="function x(event){event.preventDefault();}"
+    >
+      <center>
+        <fieldset>
+          <center>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" />
+            <br />
+            <label for="month">Month:</label>
+            <select name="month" id="month">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+            <input type="submit" id="submit" value="Pay mess bill" />
+          </center>
+        </fieldset>
+      </center>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<html>
+  <!DOCTYPE html>
+  <html>
+    <title>Room</title>
+    <head>
+      <style>
+        h1,
+        h2,
+        body {
+          color: white;
+        }
+        a {
+          padding: 10px 30px 30px 20px;
+          font-size: 2em;
+          color: yellow;
+          text-decoration: none;
+        }
+
+        img {
+          vertical-align: middle;
+        }
+
+        button {
+          width: 200px;
+          height: 50px;
+        }
+
+        h1 {
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
+          font-size: 2.5em;
+          margin-top: 30px;
+          margin-bottom: 10px;
+        }
+
+        fieldset {
+          background-color: #050505;
+          text-align: center;
+          width: 500px;
+          border: 2px solid rgb(255, 255, 255);
+          font-size: x-large;
+          font-family: Georgia, "Times New Roman", Times, serif;
+        }
+
+        p {
+          font-size: 1.2em;
+          margin-bottom: 20px;
+        }
+        /*body {
+        background-image: url("https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-3798.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      }*/
+        body {
+          background-color: black;
+        }
+      </style>
+    </head>
+    <body>
+      <p>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Sri_Sivasubramaniya_Nadar_College_of_Engineering.svg/800px-Sri_Sivasubramaniya_Nadar_College_of_Engineering.svg.png"
+          height="100px"
+          width="100px"
+        />
+        <a href="supervisorhomepage.html">Home</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="id.html">Complaints and requests</a>
+        <a href="AccountServlet">My account</a>
+      </p>
+      <hr noshade />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <center>
+        <fieldset>
+          <br />
+
+          <form
+            method="GET"
+            action="http://localhost:8080/hms/RoomRequest"
+            id="form"
+            onsubmit="function x(event){event.preventDefault();}"
+          >
+            <center>
+              <button type="submit" id="submit" value="RoomRequest">
+                Room Requests
+              </button>
+            </center>
+          </form>
+          <form
+            method="GET"
+            action="http://localhost:8080/hms/RoomChangeRequest"
+            id="form"
+            onsubmit="function x(event){event.preventDefault();}"
+          >
+            <center>
+              <button type="submit" id="submit" value="RoomRequest">
+                Room Change Requests
+              </button>
+            </center>
+          </form>
+        </fieldset>
+      </center>
+    </body>
+  </html>
+</html>

@@ -1,0 +1,89 @@
+<html>
+<!DOCTYPE html>
+<html>
+<title>Outpass</title>
+<head>
+  <style>
+    h1,
+    h2,
+    body {
+      color: white;
+    }
+    a {
+      padding: 10px 30px 30px 20px;
+      font-size: 2em;
+      color: yellow;
+      text-decoration: none;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    #b1 ,button{
+      width: 200px;
+      height: 50px;
+    }
+
+    h1 {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-size: 2.5em;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    fieldset {
+      background-color: #050505;
+      text-align: center;
+      width: 500px;
+      border: 2px solid rgb(255, 255, 255);
+      font-size: x-large;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+    /*body {
+    background-image: url("https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-3798.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }*/
+    body {
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+<p>
+  <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Sri_Sivasubramaniya_Nadar_College_of_Engineering.svg/800px-Sri_Sivasubramaniya_Nadar_College_of_Engineering.svg.png" height = 100px width = 100px>
+<a href = "studenthomepage.html">Home</a>
+<a href = "room.html">Rooms</a>
+<a href = "outpass.html">Outpass</a>
+<a href = "complaintsandrequests.html">Complaints and requests</a>
+<a href = "paymessbill.html">Mess bill</a>
+<a href = "AccountServlet">My account</a>
+</p>
+<hr noshade>
+<center>
+<br>
+<br>
+<br>
+<br>
+
+<input type="button" id="b1" onclick="location.href='outpassrequest.html';" value="Request Outpass">
+</center>
+<br>
+<br>
+<br>
+
+<center>
+<form action="OutpassDisplay" method="GET">
+  <button type="submit">View Outpasses</button>
+</center>
+</form>
+</body>
+</html>

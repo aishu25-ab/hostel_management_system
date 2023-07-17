@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Request Room Change</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Sri_Sivasubramaniya_Nadar_College_of_Engineering.svg/800px-Sri_Sivasubramaniya_Nadar_College_of_Engineering.svg.png"
+        height="100px"
+        width="100px"
+      />
+      <a href="studenthomepage.html">Home</a>
+      <a href="room.html">Rooms</a>
+      <a href="outpass.html">Outpass</a>
+      <a href="complaintsandrequests.html">Complaints and requests</a>
+      <a href="paymessbill.html">Mess bill</a>
+      <a href="AccountServlet">My account</a>
+    </p>
+    <hr noshade />
+    <br />
+    <form
+      method="POST"
+      action="http://localhost:8080/hms/InsertRoomChangeRequest"
+      id="form"
+      onsubmit="function x(event){event.preventDefault();}"
+    >
+    <center>
+    <fieldset>
+      <label for="name">Email</label>
+      <input type="text" id="email" name="email" /><br />
+      <p>Room type</p>
+      <input type="radio" id="single" name="roomtype" value="Single" />
+      <label for="single">Single </label>
+      <input type="radio" id="shared" name="roomtype" value="Shared" />
+      <label for="shared">Shared </label>
+      <p>Air Conditioning</p>
+      <input type="radio" id="ac" name="aircond" value="ac" />
+      <label for="ac">AC</label>
+      <input type="radio" id="nonac" name="aircond" value="nonac" />
+      <label for="nonac">Non-AC </label>
+      <p>Bathroom</p>
+      <input type="radio" id="attach" name="bath" value="attach" />
+      <label for="single">Attached-Bathroom </label>
+      <input type="radio" id="nonattach" name="bath" value="nonattach" />
+      <label for="nonattach">Non-Attached Bathroom </label><br />
+      <label for="doo">Date Of Occupying</label>
+      <input type="date" id="doo" name="doo" /><br />
+      <p>Duration</p>
+      <input type="radio" id="acyear" name="duration" value="acyear" />
+      <label for="ac">One Academic Year</label>
+      <input type="radio" id="sem" name="duration" value="sem" />
+      <label for="nonac">One Semester</label><br />
+      <button type="submit" id="submit" value="Submit">Submit</button>
+    </center>
+      </fieldset>
+    </form>
+  </body>
+</html>
+<script>
+  document.getElementById("submit").addEventListener("click", redirect);
+  function redirect() {
+    window.location.href = "success.html";
+  }
+</script>

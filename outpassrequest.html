@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>Request Outpass</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Sri_Sivasubramaniya_Nadar_College_of_Engineering.svg/800px-Sri_Sivasubramaniya_Nadar_College_of_Engineering.svg.png"
+        height="100px"
+        width="100px"
+      />
+      <a href="studenthomepage.html">Home</a>
+      <a href="room.html">Rooms</a>
+      <a href="outpass.html">Outpass</a>
+      <a href="complaintsandrequests.html">Complaints and requests</a>
+      <a href="paymessbill.html">Mess bill</a>
+      <a href="AccountServlet">My account</a>
+    </p>
+    <hr noshade />
+    <br />
+    <br />
+    <br />
+    <br />
+    <center>
+      <form
+        method="POST"
+        action="http://localhost:8080/hms/InsertOutpassRequest"
+        id="form1"
+        onsubmit="function x(event){event.preventDefault();}"
+      >
+        <fieldset>
+          <center>
+            <label for="email">email</label>
+            <input type="text" id="email" name="email" /><br /><br />
+            <label for="digid">Digital Id</label>
+            <input type="text" id="digid" name="digid" /><br /><br />
+            <label for="year">Year</label>
+            <input type="text" id="year" name="year" /><br /><br />
+            <label for="roomnum">Room number</label>
+            <input type="text" id="roomnum" name="roomnum" /><br /><br />
+            <label for="hostelname">Hostel name</label>
+            <input type="text" id="hostelname" name="hostelname" /><br /><br />
+            <label for="date">Date</label>
+            <input type="date" id="dat" name="dat" /><br /><br />
+            <label for="outdate">Out-date</label>
+            <input type="date" id="outdate" name="outdate" /><br /><br />
+            <label for="outtime">Out-time</label>
+            <input type="time" id="outtime" name="outtime" /><br /><br />
+            <label for="indate">In-date</label>
+            <input type="date" id="indate" name="indate" /><br /><br />
+            <label for="intime">In-time</label>
+            <input type="time" id="intime" name="intime" /><br /><br />
+            <label for="reason">Reason:</label>
+            <br />
+            <textarea name="reason"></textarea><br /><br />
+            <button type="submit" id="submit" value="Submit">Submit</button>
+          </center>
+        </fieldset>
+      </form>
+    </center>
+  </body>
+</html>
+<script>
+  document.getElementById("submit").addEventListener("click", redirect);
+  function redirect() {
+    window.location.href = "success.html";
+  }
+</script>

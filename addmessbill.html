@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Add mess bill</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Sri_Sivasubramaniya_Nadar_College_of_Engineering.svg/800px-Sri_Sivasubramaniya_Nadar_College_of_Engineering.svg.png"
+        height="100px"
+        width="100px"
+      />
+      <a href="studenthomepage.html">Home</a>
+      <a href="messbill.html">Mess bill</a>
+      <a href="AccountServlet">My account</a>
+    </p>
+    <hr noshade />
+    <br />
+    <br />
+    <br />
+    <center>
+      <form
+        method="POST"
+        action="http://localhost:8080/hms/InsertMessBill"
+        id="form1"
+        onsubmit="function x(event){event.preventDefault();}"
+      >
+        <fieldset>
+          <center>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" /><br /><br />
+            <label for="year">Year</label>
+            <input type="text" id="year" name="year" /><br /><br />
+            <label for="hostelname">Month</label>
+            <input type="text" id="month" name="month" /><br /><br />
+            <label for="amount">Amount</label>
+            <input type="text" id="amount" name="amount" /><br />
+            <p>Status</p>
+            <input type="radio" id="paid" name="status" value="paid" />
+            <label for="paid">Paid </label>
+            <input type="radio" id="pending" name="status" value="pending" />
+            <label for="pending">Unpaid </label>
+            <br /><br />
+            <textarea name="reason"></textarea><br /><br />
+            <button type="submit" id="submit" value="Submit">Submit</button>
+          </center>
+        </fieldset>
+      </form>
+    </center>
+  </body>
+</html>
+<script>
+  document.getElementById("submit").addEventListener("click", redirect);
+  function redirect() {
+    window.location.href = "success.html";
+  }
+</script>
